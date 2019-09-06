@@ -25,10 +25,10 @@ namespace AAMod.Projectiles.Zero
                        -projectile.velocity.Y * 0.2f, 46, default, 1.184211f);
             Main.dust[num469].noGravity = true;
             Main.dust[num469].velocity *= 2f;
-            projectile.rotation += .3f;
+            projectile.rotation += .9f;
             const int aislotHomingCooldown = 0;
             const int homingDelay = 20;
-            const float desiredFlySpeedInPixelsPerFrame = 10;
+            const float desiredFlySpeedInPixelsPerFrame = 100;
             const float amountOfFramesToLerpBy = 20; // minimum of 1, please keep in full numbers even though it's a float!
 
             projectile.ai[aislotHomingCooldown]++;
@@ -54,7 +54,7 @@ namespace AAMod.Projectiles.Zero
         private int HomeOnTarget()
         {
             const bool homingCanAimAtWetEnemies = true;
-            const float homingMaximumRangeInPixels = 400;
+            const float homingMaximumRangeInPixels = 800;
 
             int selectedTarget = -1;
             for (int i = 0; i < Main.maxNPCs; i++)
